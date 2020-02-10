@@ -1,0 +1,4 @@
+.story-view{
+    display: flex;
+    flex-grow: 1;
+}

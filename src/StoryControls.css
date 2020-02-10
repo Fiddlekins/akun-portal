@@ -1,0 +1,6 @@
+.story-controls {
+    /*display: inline;*/
+    width: 12%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
