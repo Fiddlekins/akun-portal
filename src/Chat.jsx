@@ -21,13 +21,21 @@ export default function Chat({ nodes, postChat, freshEntry }) {
 		}
 	};
 
+	const onImageLoad = () => {
+		scrollToBottom();
+	};
+
 	useEffect(scrollToBottom);
 
 	return (
 		<div className="chat">
 			<div className="history" ref={historyRef}>
 				{nodes.map((node) => {
-					return <ChatNode key={node.id} node={node}/>
+					return <ChatNode
+						key={node.id}
+						node={node}
+						onImageLoad={onImageLoad}
+					/>
 				})}
 				<div ref={messageEndRef}/>
 			</div>

@@ -27,12 +27,13 @@ function processBody(body) {
 			let greenText = line.charAt(0) === '>';
 			// TODO find a better way of doing this
 			const delimiter = `some-dumb-string-nobody-would-use-${Math.random()}`;
-			const content = line.replace(/https?:\/\/[\S]+/ig, ($0) => {
+			const content = line.replace(/https?:\/\/\S+/ig, ($0) => {
 				return `${delimiter}${$0}${delimiter}`;
 			}).split(delimiter).map((fragment, fragmentIndex) => {
 				return /https?:\/\/\S+/i.test(fragment) ? (
 					<a key={fragmentIndex + fragment} href={fragment}>{fragment}</a>) : fragment;
 			});
+			// TODO the key usage here is cursed
 			return (<div key={lineIndex + line} className={greenText ? "green-text" : ""}>{content}</div>);
 			// return greenText ? (<div className="green-text">{content}</div>) : (<div>{content}</div>);
 		});
@@ -42,15 +43,20 @@ function processBody(body) {
 	}
 }
 
-export default function ChatNode({ node }) {
+export default function ChatNode({ node, onImageLoad }) {
 	return (
 		<div className="chat-node">
 			<div className="info">
 				<NodeOwner node={node}/>
 				<span className="date">{formatDate(new Date(node.createdTime))}</span>
 			</div>
-			{node.data.i ? (<img alt="" className="image" src={formatImageUrl(node.data.i)}/>) : null}
-			{node.body ? (<div className="body">{processBody(node.body)}</div>) : null}
+			{node.data.i && (<img
+				alt="[failed to load]"
+				className="image"
+				src={formatImageUrl(node.data.i)}
+				onLoad={onImageLoad}
+			/>)}
+			{node.body && (<div className="body">{processBody(node.body)}</div>)}
 		</div>
 	);
 }
