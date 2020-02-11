@@ -1,4 +1,4 @@
-import React, {useReducer, useRef} from 'react';
+import React, {useEffect, useReducer, useRef} from 'react';
 import './ChatInput.css';
 
 const initialState = {
@@ -39,9 +39,14 @@ export default function ChatInput({ postChat }) {
 
 	const onChange = (e) => {
 		dispatch({ field: e.target.name, value: e.target.value });
-		e.target.style.height = 'inherit';
-		e.target.style.height = `${e.target.scrollHeight}px`;
 	};
+
+	useEffect(() => {
+		const textarea = chatInputRef.current;
+		textarea.style.height = 'inherit';
+		// Why +2 ? Because without it the scrollbar is always visible
+		textarea.style.height = `${textarea.scrollHeight + 2}px`;
+	});
 
 	return (
 		<form className="chat-input" onSubmit={onSubmit}>

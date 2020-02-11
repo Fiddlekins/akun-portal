@@ -17,6 +17,8 @@
     box-sizing: border-box;
     overflow: hidden;
     overflow-wrap: break-word;
+    max-height: 115px;
+    overflow-y: auto;
 }
 
 .chat-input > textarea:focus {
