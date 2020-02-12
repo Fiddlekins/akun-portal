@@ -3,6 +3,7 @@
     overflow: hidden;
     position: relative;
     background-color: #2a2c3b;
+    cursor: pointer;
 }
 
 .nav-bar-story .short-name {
