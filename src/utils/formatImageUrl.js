@@ -31,6 +31,7 @@ export default function formatImageUrl(url, options) {
 			const fileName = fileNameMatch[1];
 			newUrl.search = '';
 			if (options) {
+				// @see https://github.com/tripviss/image-resizer
 				if (crop) {
 					newUrl.pathname = `/h${height}-w${width}-cfill/images/${fileName}`;
 				} else {

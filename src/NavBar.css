@@ -2,4 +2,15 @@
     overflow-y: auto;
     flex-shrink: 0;
     flex-grow: 0;
+    background-color: rgb(33, 34, 46);
+}
+
+.nav-bar::-webkit-scrollbar-track-piece {
+    border: 3px solid rgb(33, 34, 46);
+    background-color: rgb(39, 41, 63);
+}
+
+.nav-bar::-webkit-scrollbar-thumb {
+    border: 3px solid rgb(33, 34, 46);
+    background-color: rgb(18, 19, 29);
 }
