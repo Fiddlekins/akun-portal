@@ -1,5 +1,7 @@
 .chapter-node {
     word-break: break-word;
+    user-select: text;
+    padding: 2em;
 }
 
 .chapter-node img {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatNode.css';
-import formatDate from './utils/formatDate.js';
-import formatImageUrl from './utils/formatImageUrl.js';
+import formatDate from '../utils/formatDate.js';
+import formatImageUrl from '../utils/formatImageUrl.js';
 
 function NodeOwner({ node }) {
 	if (node.userId) {
@@ -23,7 +23,7 @@ function NodeOwner({ node }) {
 
 function processBody(body) {
 	try {
-		return body.split('\n').map((line, lineIndex) => {
+		return body.toString().split('\n').map((line, lineIndex) => {
 			let greenText = line.charAt(0) === '>';
 			// TODO find a better way of doing this
 			const delimiter = `some-dumb-string-nobody-would-use-${Math.random()}`;
@@ -39,11 +39,11 @@ function processBody(body) {
 		});
 	} catch (err) {
 		console.log(err);
-		return 'oops';
+		return <div style={{ color: 'red' }}> {err.toString()}</div>;
 	}
 }
 
-export default function ChatNode({ node, onImageLoad }) {
+export default function ChatNode({ node, onImageLoad, onImageLoadError }) {
 	return (
 		<div className="chat-node">
 			<div className="info">
@@ -55,6 +55,7 @@ export default function ChatNode({ node, onImageLoad }) {
 				className="image"
 				src={formatImageUrl(node.data.i)}
 				onLoad={onImageLoad}
+				onError={onImageLoadError}
 			/>)}
 			{node.body && (<div className="body">{processBody(node.body)}</div>)}
 		</div>

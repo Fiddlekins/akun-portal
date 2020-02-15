@@ -2,6 +2,11 @@ body {
     font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
     background-color: rgb(42, 44, 59);
     color: rgb(212, 213, 217);
+    user-select: none;
+}
+
+textarea {
+    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
 .App {

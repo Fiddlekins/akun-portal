@@ -1,0 +1,20 @@
+.story-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-header .title {
+    font-size: 4em;
+    text-align: center;
+}
+
+.story-header .cover {
+    max-width: 100%;
+}
+
+.story-header .description {
+    font-size: 2em;
+    padding: 1em;
+}

@@ -3,11 +3,13 @@ import ChapterNode from './ChapterNode.jsx';
 import ChoiceNode from './ChoiceNode.jsx';
 import ReaderPostNode from './ReaderPostNode.jsx';
 import './Story.css';
+import StoryHeader from './StoryHeader.jsx';
 
-export default function Story({ nodes }) {
+export default function Story({ metaData, nodes }) {
 	let unrecognisedKey = 0;
 	return (
 		<div className="story">
+			<StoryHeader metaData={metaData} />
 			<div className="history">
 				{nodes.map((node) => {
 					switch (node.type) {

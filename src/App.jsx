@@ -14,6 +14,7 @@ export default class App extends React.Component {
 				hostname: 'rt.fiction.live'
 			}
 		});
+		window.akun = this._akun; // make debugging easier
 		this.state = {
 			client: null,
 			clientChatFreshEntry: false,
@@ -21,13 +22,15 @@ export default class App extends React.Component {
 		};
 
 		this.updateLiveStories();
+
 	}
 
 	async updateLiveStories() {
-		this.setState({ liveStories: (await this._akun.get('/api/anonkun/board/live')).stories });
-		setTimeout(() => {
-			this.updateLiveStories();
-		}, 30000);
+		const { stories } = await this._akun.getStories('live', null);
+		this.setState({ liveStories: stories });
+		// setTimeout(() => {
+		// 	this.updateLiveStories();
+		// }, 30000);
 	}
 
 	join(id) {
@@ -38,6 +41,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
+		console.log('app render');
 		return (
 			<div className="App">
 				<NavBar
@@ -49,5 +53,3 @@ export default class App extends React.Component {
 		);
 	}
 }
-
-

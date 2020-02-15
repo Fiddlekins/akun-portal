@@ -1,0 +1,30 @@
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    align-items: baseline;
+}
+
+.tag-list .label {
+    font-weight: bold;
+    font-size: 0.75em;
+    margin-right: 0.5em;
+}
+
+.tag-list .tag {
+    margin-right: 0.5em;
+    padding: 0.25em 0.5em;
+}
+
+.tag-list .tag:hover {
+    background-color: rgba(27, 29, 43, 0.44);
+}
+
+.tag-list .spoiler {
+    color: rgba(0, 0, 0, 0);
+    background-color: #1b1d2b;
+}
+
+.tag-list .spoiler:hover {
+    color: white;
+}

@@ -1,5 +1,6 @@
 .chat-node {
     padding: 2px 14px;
+    user-select: text;
 }
 
 .chat-node:hover {
@@ -38,7 +39,7 @@
     display: inline;
     font-size: 8px;
     margin-left: .5em;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .chat-node .body {

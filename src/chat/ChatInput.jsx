@@ -54,6 +54,7 @@ export default function ChatInput({ postChat }) {
 				ref={chatInputRef}
 				name="textarea"
 				value={state.textarea}
+				placeholder="Message"
 				rows="1"
 				onKeyDown={onKeyDown}
 				onChange={onChange}
