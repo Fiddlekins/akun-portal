@@ -1,0 +1,36 @@
+.nav-bar-story-info {
+    position: absolute;
+    left: 78px;
+    height: 0;
+    /*opacity: 0;*/
+    animation: fadein 250ms;
+    /*animation-delay: 50ms;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+.nav-bar-story-info .content {
+    position: relative;
+    transform: translateY(-50%);
+    background-color: black;
+    padding: 1em;
+    border-radius: 4px;
+    color: white;
+    /*font-weight: bold;*/
+}
+
+.nav-bar-story-info .pointer {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background-color: black;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

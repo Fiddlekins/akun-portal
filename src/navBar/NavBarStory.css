@@ -4,11 +4,22 @@
     position: relative;
     background-color: #2a2c3b;
     cursor: pointer;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    transition: border-radius 200ms ease;
+}
+
+.nav-bar-story:hover {
+    border-radius: 16px;
 }
 
 .nav-bar-story .short-name {
     font-weight: bold;
     text-align: center;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
 }
 
 .nav-bar-story .short-name-large {

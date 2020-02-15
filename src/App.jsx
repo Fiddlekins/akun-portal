@@ -1,7 +1,7 @@
 import Akun from 'akun-api';
 import React from 'react';
 import './App.css';
-import NavBar from './NavBar.jsx';
+import NavBar from './navBar/NavBar.jsx';
 import StoryView from './StoryView.jsx';
 
 export default class App extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBarStory.css';
-import formatImageUrl from './utils/formatImageUrl.js';
+import formatImageUrl from '../utils/formatImageUrl.js';
 
 function getShortName(title) {
 	const match = title.match(/\b[A-z:']/g);
@@ -11,7 +11,7 @@ function getShortName(title) {
 	return match.join('');
 }
 
-export default function NavBarStory({ data, join }) {
+export default function NavBarStory({ data, join, onMouseEnter, onMouseLeave }) {
 	const options = {
 		width: 64,
 		height: 64,
@@ -28,16 +28,6 @@ export default function NavBarStory({ data, join }) {
 	const onClick = () => {
 		join(data._id);
 	};
-	const style = {
-		width: `${options.width}px`,
-		height: `${options.height}px`,
-		borderRadius: `${options.width / 2}px`
-	};
-	const shortNameStyle = {
-		width: `${options.width}px`,
-		height: `${options.height}px`,
-		lineHeight: `${options.height}px`
-	};
 	const shortName = getShortName(data.t);
 	let shortNameClass = 'short-name-large';
 	if (shortName.length > 3) {
@@ -47,8 +37,16 @@ export default function NavBarStory({ data, join }) {
 		shortNameClass = 'short-name-small';
 	}
 	return (
-		<div className="nav-bar-story" onClick={onClick} style={style}>
-			<div className={`short-name ${shortNameClass}`} style={shortNameStyle}>{shortName}</div>
+		<div className="nav-bar-story"
+			 onClick={onClick}
+			 onMouseEnter={(e) => {
+				 onMouseEnter(data, e.currentTarget.offsetTop);
+			 }}
+			 onMouseLeave={() => {
+				 onMouseLeave(data);
+			 }}
+		>
+			<div className={`short-name ${shortNameClass}`}>{shortName}</div>
 			{coverUrl && <img src={coverUrl} alt="" className="icon"/>}
 		</div>
 	);
