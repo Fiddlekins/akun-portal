@@ -43,7 +43,8 @@ export default function formatImageUrl(url, options) {
 		}
 			break;
 		default:
-			throw new Error(`Couldn't parse image url: ${url}`);
+			console.warn(`Couldn't parse image url: ${url}`);
+			return url;
 	}
 
 	return newUrl.toString();

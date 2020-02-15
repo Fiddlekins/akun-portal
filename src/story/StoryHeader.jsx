@@ -1,4 +1,5 @@
 import React from 'react';
+import formatImageUrl from '../utils/formatImageUrl.js';
 import './StoryHeader.css';
 import TagList from './TagList.jsx';
 
@@ -18,6 +19,9 @@ export default function StoryHeader({ metaData }) {
 		coverUrl = metaData.i[0];
 	} else if (metaData.i) {
 		coverUrl = metaData.i;
+	}
+	if (coverUrl) {
+		coverUrl = formatImageUrl(coverUrl);
 	}
 	return (
 		<div className="story-header">
