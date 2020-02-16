@@ -17,4 +17,41 @@
 .story-header .description {
     font-size: 2em;
     padding: 1em;
+    user-select: text;
+}
+
+.story-header .authors {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.story-header .author {
+    margin-right: 2em;
+}
+
+.story-header .author:hover .username {
+    text-decoration: underline;
+}
+
+.story-header .authors a {
+    display: flex;
+    align-items: center;
+    color: rgb(212, 213, 217);
+    text-decoration: none;
+}
+
+.story-header .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-right: 4px;
+    display: inline;
+}
+
+.story-header .username {
+    font-weight: bold;
+    display: inline;
+    font-size: 1em;
 }
