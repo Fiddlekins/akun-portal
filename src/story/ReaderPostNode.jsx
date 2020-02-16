@@ -7,7 +7,7 @@ function Dice({ dice, vote }) {
 	return (
 		<div className="entry">
 			<div dangerouslySetInnerHTML={{ __html: dice }}/>
-			{vote && (<div>{vote}</div>)}
+			{vote && (<div dangerouslySetInnerHTML={{ __html: vote }}/>)}
 		</div>
 	);
 }
@@ -15,7 +15,7 @@ function Dice({ dice, vote }) {
 function Vote({ vote }) {
 	return (
 		<div className="entry">
-			<div>{vote}</div>
+			<div dangerouslySetInnerHTML={{ __html: vote }}/>
 		</div>
 	);
 }
