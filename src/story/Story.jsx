@@ -23,6 +23,7 @@ export default function Story({ metaData, nodes }) {
 							return (<div key={unrecognisedKey++}>Unrecognised node type: {node.type}</div>);
 					}
 				})}
+				<div className="footer"/>
 			</div>
 		</div>
 	);

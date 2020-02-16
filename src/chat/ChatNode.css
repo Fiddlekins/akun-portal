@@ -9,7 +9,7 @@
 
 .chat-node .info {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     color: grey;
     line-height: 1.5;
 }

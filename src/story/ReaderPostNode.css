@@ -1,0 +1,37 @@
+.reader-post-node {
+    word-break: break-word;
+    user-select: text;
+    padding: 1em;
+}
+
+.reader-post-node .header {
+    display: flex;
+}
+
+.reader-post-node .title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.choice-node .closed {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+
+.reader-post-node .count {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+
+.reader-post-node .date {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.reader-post-node .entry {
+    padding: 0.5em;
+    margin-bottom: 2px;
+    background-color: #383a4c6e;
+    font-size: 14px;
+}
