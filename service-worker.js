@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/akun-portal/precache-manifest.98eeb337f66fb98670259fd31a154ac5.js"
+  "/akun-portal/precache-manifest.cacaad5d46f0800b4c5c0eac22e7f487.js"
 );
 
 self.addEventListener('message', (event) => {

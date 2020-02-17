@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/akun-portal/static/css/main.50080ca5.chunk.css",
-    "main.js": "/akun-portal/static/js/main.2f81978a.chunk.js",
-    "main.js.map": "/akun-portal/static/js/main.2f81978a.chunk.js.map",
+    "main.css": "/akun-portal/static/css/main.62461baf.chunk.css",
+    "main.js": "/akun-portal/static/js/main.e35ad57a.chunk.js",
+    "main.js.map": "/akun-portal/static/js/main.e35ad57a.chunk.js.map",
     "runtime-main.js": "/akun-portal/static/js/runtime-main.45502f15.js",
     "runtime-main.js.map": "/akun-portal/static/js/runtime-main.45502f15.js.map",
     "static/js/2.ede4e652.chunk.js": "/akun-portal/static/js/2.ede4e652.chunk.js",
     "static/js/2.ede4e652.chunk.js.map": "/akun-portal/static/js/2.ede4e652.chunk.js.map",
     "index.html": "/akun-portal/index.html",
-    "precache-manifest.98eeb337f66fb98670259fd31a154ac5.js": "/akun-portal/precache-manifest.98eeb337f66fb98670259fd31a154ac5.js",
+    "precache-manifest.cacaad5d46f0800b4c5c0eac22e7f487.js": "/akun-portal/precache-manifest.cacaad5d46f0800b4c5c0eac22e7f487.js",
     "service-worker.js": "/akun-portal/service-worker.js",
-    "static/css/main.50080ca5.chunk.css.map": "/akun-portal/static/css/main.50080ca5.chunk.css.map",
+    "static/css/main.62461baf.chunk.css.map": "/akun-portal/static/css/main.62461baf.chunk.css.map",
     "static/js/2.ede4e652.chunk.js.LICENSE.txt": "/akun-portal/static/js/2.ede4e652.chunk.js.LICENSE.txt",
-    "static/media/spiral.20b1eba6.svg": "/akun-portal/static/media/spiral.20b1eba6.svg"
+    "static/media/spiral.59831f55.svg": "/akun-portal/static/media/spiral.59831f55.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.45502f15.js",
     "static/js/2.ede4e652.chunk.js",
-    "static/css/main.50080ca5.chunk.css",
-    "static/js/main.2f81978a.chunk.js"
+    "static/css/main.62461baf.chunk.css",
+    "static/js/main.e35ad57a.chunk.js"
   ]
 }
