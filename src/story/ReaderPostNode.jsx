@@ -38,7 +38,7 @@ export default function ReaderPostNode({ node }) {
 		<div className="reader-post-node">
 			<div className="header">
 				<span className="title">Reader Posts -&nbsp;</span>
-				{node.closed && (<span className="closed">Closed -&nbsp;</span>)}
+				{node.closed && (<span className="closed-state">Closed -&nbsp;</span>)}
 				<span className="count">{postCountText}</span>
 				<span className="date">{formatDate(new Date(node.createdTime))}</span>
 			</div>

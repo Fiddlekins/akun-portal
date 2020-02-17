@@ -13,7 +13,7 @@
     font-weight: 400;
 }
 
-.choice-node .closed {
+.choice-node .closed-state {
     color: rgb(153, 153, 153);
     font-size: 14px;
 }

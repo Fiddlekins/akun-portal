@@ -1,0 +1,97 @@
+.node {
+    word-break: break-word;
+    user-select: text;
+    padding: 1em;
+}
+
+.header {
+    display: flex;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.closedState {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+
+.count {
+    font-size: 14px;
+}
+
+.date {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.body {
+    font-size: 14px
+}
+
+.body .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+}
+
+.body.open .choice {
+    cursor: pointer;
+    user-select: none;
+}
+
+.body .choice.unselected {
+    background-color: #383a4c6e;
+}
+
+.body.open .choice.unselected:hover {
+    background-color: rgba(102, 102, 204, 0.15);
+}
+
+.body .choice.selected {
+    background-color: #66c;
+}
+
+.body.open .choice.selected:hover {
+    background-color: #6868cf;
+}
+
+.body .choice.pending {
+    background-color: rgba(102, 102, 204, 0.5);
+}
+
+.body .choice.xOut {
+    background-color: #383a4c6e!important;
+    cursor: initial;
+}
+
+.body .countHeader {
+    padding: 0 0.5em;
+    text-align: right;
+    font-size: 0.75em;
+}
+
+.body .vote {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.body .choice.xOut .vote .value {
+    text-decoration: line-through;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+}
+
+.body .vote .xOutReason {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+}
+
+.body .count {
+    width: 4em;
+    text-align: right;
+    padding: 0.5em;
+}

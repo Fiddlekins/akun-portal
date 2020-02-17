@@ -1,6 +1,6 @@
 import React from 'react';
-import './NavBarStory.css';
 import formatImageUrl from '../utils/formatImageUrl.js';
+import './NavBarStory.css';
 
 function getShortName(title) {
 	const match = title.match(/\b[A-z:']/g);
@@ -11,7 +11,7 @@ function getShortName(title) {
 	return match.join('');
 }
 
-export default function NavBarStory({ data, join, onMouseEnter, onMouseLeave }) {
+export default function NavBarStory({ data, showStory, onMouseEnter, onMouseLeave }) {
 	const options = {
 		width: 64,
 		height: 64,
@@ -26,7 +26,7 @@ export default function NavBarStory({ data, join, onMouseEnter, onMouseLeave }) 
 		}
 	}
 	const onClick = () => {
-		join(data._id);
+		showStory(data._id);
 	};
 	const shortName = getShortName(data.t);
 	let shortNameClass = 'short-name-large';

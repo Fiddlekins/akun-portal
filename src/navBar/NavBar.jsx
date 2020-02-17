@@ -13,7 +13,7 @@ function reducer(state, { story, storyPosition, scrollTop }) {
 	};
 }
 
-export default function NavBar({ liveStories, join }) {
+export default function NavBar({ liveStories, showStory }) {
 	const contentRef = useRef(null);
 
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -40,7 +40,7 @@ export default function NavBar({ liveStories, join }) {
 						return (<NavBarStory
 							key={story._id}
 							data={story}
-							join={join}
+							showStory={showStory}
 							onMouseEnter={onMouseEnter}
 							onMouseLeave={onMouseLeave}
 						/>);

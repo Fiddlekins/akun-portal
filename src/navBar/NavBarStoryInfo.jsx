@@ -6,7 +6,7 @@ export default function NavBarStoryInfo({ story, position }) {
 		<div className="nav-bar-story-info" style={{ top: `${position}px` }}>
 			<div className="pointer"/>
 			<div className="content">
-				{story.t}
+				<div dangerouslySetInnerHTML={{ __html: story.t }}/>
 			</div>
 		</div>
 	);

@@ -35,7 +35,7 @@ export default function StoryHeader({ metaData }) {
 	}
 	return (
 		<div className="story-header">
-			<h1 className="title">{metaData.t}</h1>
+			<h1 className="title" dangerouslySetInnerHTML={{ __html: metaData.t }}/>
 			{coverUrl && <img alt="" className="cover" src={coverUrl} key={coverUrl}/>}
 			<div className="authors">{
 				metaData.u.filter((user) => user.n).map((user) => {
@@ -43,7 +43,7 @@ export default function StoryHeader({ metaData }) {
 				})
 			}</div>
 			<TagList tags={metaData.ta} spoilerTags={metaData.spoilerTags}/>
-			{metaData.d && <div className="description">{metaData.d}</div>}
+			{metaData.d && <div className="description" dangerouslySetInnerHTML={{ __html: metaData.d }}/>}
 		</div>
 	);
 }
