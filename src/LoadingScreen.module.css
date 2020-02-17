@@ -30,21 +30,21 @@
 }
 
 .spiral1 {
-    animation: spin1 infinite 20s linear;
+    animation: spin1 infinite 17s linear;
     height: 100%;
     width: 100%;
 }
 
 .spiral2 {
-    animation: spin2 infinite 16s linear;
+    animation: spin2 infinite 13s linear;
     height: 80%;
     width: 80%;
 }
 
 .spiral3 {
-    animation: spin3 infinite 12s linear;
-    height: 60%;
-    width: 60%;
+    animation: spin3 infinite 11s linear;
+    height: 65%;
+    width: 65%;
 }
 
 .spiral g {
@@ -85,18 +85,18 @@
 
 @keyframes spin2 {
     from {
-        transform: translate(-50%, -50%) rotate(10deg);
+        transform: translate(-50%, -50%) rotate(20deg);
     }
     to {
-        transform: translate(-50%, -50%) rotate(370deg);
+        transform: translate(-50%, -50%) rotate(380deg);
     }
 }
 
 @keyframes spin3 {
     from {
-        transform: translate(-50%, -50%) rotate(20deg);
+        transform: translate(-50%, -50%) rotate(40deg);
     }
     to {
-        transform: translate(-50%, -50%) rotate(380deg);
+        transform: translate(-50%, -50%) rotate(400deg);
     }
 }
