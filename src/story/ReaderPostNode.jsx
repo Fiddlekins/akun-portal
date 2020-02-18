@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
-import './ReaderPostNode.css';
 import formatDate from '../utils/formatDate.js';
+import styles from './ReaderPostNode.module.css';
 
 function Dice({ dice, vote }) {
 	return (
-		<div className="entry">
+		<div className={styles.entry}>
 			<div dangerouslySetInnerHTML={{ __html: dice }}/>
 			{vote && (<div dangerouslySetInnerHTML={{ __html: vote }}/>)}
 		</div>
@@ -14,7 +14,7 @@ function Dice({ dice, vote }) {
 
 function Vote({ vote }) {
 	return (
-		<div className="entry">
+		<div className={styles.entry}>
 			<div dangerouslySetInnerHTML={{ __html: vote }}/>
 		</div>
 	);
@@ -35,15 +35,15 @@ export default function ReaderPostNode({ node }) {
 	}
 
 	return (
-		<div className="reader-post-node">
-			<div className="header">
-				<span className="title">Reader Posts -&nbsp;</span>
-				{node.closed && (<span className="closed-state">Closed -&nbsp;</span>)}
-				<span className="count">{postCountText}</span>
-				<span className="date">{formatDate(new Date(node.createdTime))}</span>
+		<div className={styles.node}>
+			<div className={styles.header}>
+				<span className={styles.title}>Reader Posts -&nbsp;</span>
+				{node.closed && (<span className={styles.closedState}>Closed -&nbsp;</span>)}
+				<span className={styles.count}>{postCountText}</span>
+				<span className={styles.date}>{formatDate(new Date(node.createdTime))}</span>
 			</div>
-			<div className="body">
-				{node.dice && <div className="dice">{
+			<div className={styles.body}>
+				{node.dice && <div className={styles.dice}>{
 					diceRollerIds.map((diceRollerId) => {
 						return (<Dice
 							key={diceRollerId}
@@ -52,7 +52,7 @@ export default function ReaderPostNode({ node }) {
 						/>);
 					})
 				}</div>}
-				{node.votes && <div className="votes">
+				{node.votes && <div className={styles.votes}>
 					{
 						voterIds.filter((voterId) => {
 							return !diceRollerIds.includes(voterId);

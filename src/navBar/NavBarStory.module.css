@@ -1,4 +1,4 @@
-.nav-bar-story {
+.story {
     margin: 8px;
     overflow: hidden;
     position: relative;
@@ -10,11 +10,11 @@
     transition: border-radius 200ms ease;
 }
 
-.nav-bar-story:hover {
+.story:hover {
     border-radius: 16px;
 }
 
-.nav-bar-story .short-name {
+.shortName {
     font-weight: bold;
     text-align: center;
     width: 64px;
@@ -22,19 +22,19 @@
     line-height: 64px;
 }
 
-.nav-bar-story .short-name-large {
+.large {
     font-size: 20px;
 }
 
-.nav-bar-story .short-name-medium {
+.medium {
     font-size: 16px;
 }
 
-.nav-bar-story .short-name-small {
+.small {
     font-size: 12px;
 }
 
-.nav-bar-story .icon {
+.icon {
     position: absolute;
     top: 0;
 }

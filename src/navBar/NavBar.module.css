@@ -1,4 +1,4 @@
-.nav-bar {
+.navBar {
     position: absolute;
     top: 0;
     width: 80px;
@@ -7,17 +7,17 @@
     background-color: rgb(33, 34, 46);
 }
 
-.nav-bar .content {
+ .content {
     height: 100%;
     width: 100px;
     overflow-y: auto;
 }
 
-.nav-bar .content::-webkit-scrollbar {
+ .content::-webkit-scrollbar {
     display: none;
 }
 
-.nav-bar-overlay {
+.navBarOverlay {
     position: fixed;
     top: 0;
     right: 0;

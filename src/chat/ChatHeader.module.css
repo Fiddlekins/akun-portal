@@ -1,13 +1,13 @@
-.chat-header {
+.header {
     background-color: rgb(50, 52, 72);
     display: flex;
     padding: 1em;
 }
 
-.chat-header .title{
+.title {
     flex-grow: 1;
 }
 
-.chat-header .user-count{
+.userCount {
 
 }

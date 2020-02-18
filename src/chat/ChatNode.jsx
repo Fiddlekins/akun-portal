@@ -1,22 +1,25 @@
+import classnames from 'classnames/bind';
 import React from 'react';
-import './ChatNode.css';
 import formatDate from '../utils/formatDate.js';
 import formatImageUrl from '../utils/formatImageUrl.js';
+import styles from './ChatNode.module.css';
+
+const cx = classnames.bind(styles);
 
 function NodeOwner({ node }) {
 	if (node.userId) {
 		if (node.username === 'Anon') {
-			return (<span className="username">{node.username} ({node.userId})</span>);
+			return (<span className={styles.username}>{node.username} ({node.userId})</span>);
 		} else {
 			const avatarUrl = node.avatar && formatImageUrl(node.avatar, { width: 16, height: 16 });
 			return (<a href={`https://fiction.live/user/${node.username}`}>
-					{avatarUrl ? (<img alt="" className="avatar" src={avatarUrl}/>) : null}
-					<span className="username">{node.username}</span>
+					{avatarUrl ? (<img alt="" className={styles.avatar} src={avatarUrl}/>) : null}
+					<span className={styles.username}>{node.username}</span>
 				</a>
 			);
 		}
 	} else {
-		return (<span className="username">{node.username}</span>);
+		return (<span className={styles.username}>{node.username}</span>);
 	}
 
 }
@@ -34,8 +37,7 @@ function processBody(body) {
 					<a key={fragmentIndex + fragment} href={fragment}>{fragment}</a>) : fragment;
 			});
 			// TODO the key usage here is cursed
-			return (<div key={lineIndex + line} className={greenText ? "green-text" : ""}>{content}</div>);
-			// return greenText ? (<div className="green-text">{content}</div>) : (<div>{content}</div>);
+			return (<div key={lineIndex + line} className={cx({ greenText })}>{content}</div>);
 		});
 	} catch (err) {
 		console.log(err);
@@ -45,19 +47,19 @@ function processBody(body) {
 
 export default function ChatNode({ node, onImageLoad, onImageLoadError }) {
 	return (
-		<div className="chat-node">
-			<div className="info">
+		<div className={styles.node}>
+			<div className={styles.info}>
 				<NodeOwner node={node}/>
-				<span className="date">{formatDate(new Date(node.createdTime))}</span>
+				<span className={styles.date}>{formatDate(new Date(node.createdTime))}</span>
 			</div>
 			{node.data.i && (<img
 				alt="[failed to load]"
-				className="image"
+				className={styles.image}
 				src={formatImageUrl(node.data.i)}
 				onLoad={onImageLoad}
 				onError={onImageLoadError}
 			/>)}
-			{node.body && (<div className="body">{processBody(node.body)}</div>)}
+			{node.body && (<div className={styles.body}>{processBody(node.body)}</div>)}
 		</div>
 	);
 }

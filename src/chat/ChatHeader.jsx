@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './ChatHeader.css';
+import styles from './ChatHeader.module.css';
 
 export default function ChatHeader({ client }) {
 	const [usersCount, setUsersCount] = useState(client.chatThread.usersCount);
@@ -16,9 +16,9 @@ export default function ChatHeader({ client }) {
 	}, [client]);
 
 	return (
-		<div className="chat-header">
-			<div className="title">Chat</div>
-			<div className="user-count">{usersCount} users</div>
+		<div className={styles.header}>
+			<div className={styles.title}>Chat</div>
+			<div className={styles.userCount}>{usersCount} users</div>
 		</div>
 	);
 }

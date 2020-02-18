@@ -1,25 +1,20 @@
-.chapter-node {
+.node {
     word-break: break-word;
     user-select: text;
     padding: 1em;
 }
 
-.chapter-node .header {
+.header {
     display: flex;
 }
 
-.chapter-node .title {
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.chapter-node .date {
+.date {
     color: rgb(153, 153, 153);
     font-size: 14px;
     margin-left: auto;
 }
 
-.chapter-node img {
+.body img {
     display: block;
     margin-left: auto;
     margin-right: auto;

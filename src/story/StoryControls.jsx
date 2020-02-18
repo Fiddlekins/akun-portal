@@ -1,9 +1,9 @@
 import React from 'react';
-import './StoryControls.css';
+import styles from './StoryControls.module.css';
 
-export default function StoryControls(props) {
+export default function StoryControls() {
 	return (
-		<div className="story-controls">
+		<div className={styles.controls}>
 			<div>Live Timer</div>
 			<div>Reviews</div>
 			<div>Follow</div>

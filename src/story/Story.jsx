@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ChapterNode from './ChapterNode.jsx';
 import ChoiceNode from './ChoiceNode.jsx';
 import ReaderPostNode from './ReaderPostNode.jsx';
-import './Story.css';
+import styles from './Story.module.css';
 import StoryHeader from './StoryHeader.jsx';
 
 export default function Story({ client }) {
@@ -55,9 +55,9 @@ export default function Story({ client }) {
 
 	let unrecognisedKey = 0;
 	return (
-		<div className="story">
+		<div className={styles.story}>
 			<StoryHeader metaData={metaData}/>
-			<div className="history">
+			<div className={styles.history}>
 				{nodes.map((node) => {
 					switch (node.type) {
 						case 'chapter':
@@ -70,7 +70,7 @@ export default function Story({ client }) {
 							return (<div key={unrecognisedKey++}>Unrecognised node type: {node.type}</div>);
 					}
 				})}
-				<div className="footer"/>
+				<div className={styles.footer}/>
 			</div>
 		</div>
 	);

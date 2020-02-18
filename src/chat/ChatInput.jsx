@@ -1,5 +1,5 @@
 import React, {useEffect, useReducer, useRef} from 'react';
-import './ChatInput.css';
+import styles from './ChatInput.module.css';
 
 const initialState = {
 	textarea: ''
@@ -49,9 +49,10 @@ export default function ChatInput({ postChat }) {
 	});
 
 	return (
-		<form className="chat-input" onSubmit={onSubmit}>
+		<form className={styles.chatInput} onSubmit={onSubmit}>
 			<textarea
 				ref={chatInputRef}
+				className={styles.textarea}
 				name="textarea"
 				value={state.textarea}
 				placeholder="Message"

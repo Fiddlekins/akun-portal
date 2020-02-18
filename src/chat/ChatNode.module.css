@@ -1,27 +1,27 @@
-.chat-node {
+.node {
     padding: 2px 14px;
     user-select: text;
 }
 
-.chat-node:hover {
+.node:hover {
     background: #393a4d;
 }
 
-.chat-node .info {
+.info {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     color: grey;
     line-height: 1.5;
 }
 
-.chat-node .info a {
+.info a {
     display: flex;
     align-items: center;
     color: grey;
     text-decoration: none;
 }
 
-.chat-node .avatar {
+.avatar {
     width: 16px;
     height: 16px;
     border-radius: 8px;
@@ -29,34 +29,33 @@
     display: inline;
 }
 
-.chat-node .username {
+.username {
     font-weight: bold;
     display: inline;
     font-size: 10px;
 }
 
-.chat-node .date {
+.date {
     display: inline;
     font-size: 8px;
     margin-left: .5em;
     opacity: 0.5;
 }
 
-.chat-node .body {
+.body {
     word-break: break-word;
     white-space: pre-wrap;
     font-size: 14px;
     line-height: 1.5;
 }
 
-.chat-node .body .green-text {
+.body .greenText {
     color: #789922;
 }
 
-.chat-node .image {
+.image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
 }
-

@@ -1,14 +1,14 @@
 import React from 'react';
 import formatImageUrl from '../utils/formatImageUrl.js';
-import './StoryHeader.css';
+import styles from './StoryHeader.module.css';
 import TagList from './TagList.jsx';
 
 function Author({ user }) {
 	const avatarUrl = user.a && formatImageUrl(user.a, { width: 32, height: 32 });
-	return (<div className="author">
+	return (<div className={styles.author}>
 		<a href={`https://fiction.live/user/${user.n}`}>
-			{avatarUrl ? (<img alt="" className="avatar" src={avatarUrl}/>) : null}
-			<span className="username">{user.n}</span>
+			{avatarUrl ? (<img alt="" className={styles.avatar} src={avatarUrl}/>) : null}
+			<span className={styles.username}>{user.n}</span>
 		</a>
 	</div>);
 }
@@ -34,16 +34,16 @@ export default function StoryHeader({ metaData }) {
 		coverUrl = formatImageUrl(coverUrl);
 	}
 	return (
-		<div className="story-header">
-			<h1 className="title" dangerouslySetInnerHTML={{ __html: metaData.t }}/>
-			{coverUrl && <img alt="" className="cover" src={coverUrl} key={coverUrl}/>}
-			<div className="authors">{
+		<div className={styles.header}>
+			<h1 className={styles.title} dangerouslySetInnerHTML={{ __html: metaData.t }}/>
+			{coverUrl && <img alt="" className={styles.cover} src={coverUrl} key={coverUrl}/>}
+			<div className={styles.authors}>{
 				metaData.u.filter((user) => user.n).map((user) => {
 					return (<Author key={user.n} user={user}/>)
 				})
 			}</div>
 			<TagList tags={metaData.ta} spoilerTags={metaData.spoilerTags}/>
-			{metaData.d && <div className="description" dangerouslySetInnerHTML={{ __html: metaData.d }}/>}
+			{metaData.d && <div className={styles.description} dangerouslySetInnerHTML={{ __html: metaData.d }}/>}
 		</div>
 	);
 }

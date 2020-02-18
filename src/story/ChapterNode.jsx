@@ -1,7 +1,7 @@
 import React from 'react';
 import formatDate from '../utils/formatDate.js';
 import formatImageUrl from '../utils/formatImageUrl.js';
-import './ChapterNode.css';
+import styles from './ChapterNode.module.css';
 
 export default function ChapterNode({ node }) {
 	let innerHTML = node.body;
@@ -9,12 +9,11 @@ export default function ChapterNode({ node }) {
 		return `${$1}${formatImageUrl($2)}${$3}`;
 	});
 	return (
-		<div className="chapter-node">
-			<div className="header">
-				<span className="title"></span>
-				<span className="date">{formatDate(new Date(node.createdTime))}</span>
+		<div className={styles.node}>
+			<div className={styles.header}>
+				<span className={styles.date}>{formatDate(new Date(node.createdTime))}</span>
 			</div>
-			<div className="body" dangerouslySetInnerHTML={{ __html: innerHTML }}/>
+			<div className={styles.body} dangerouslySetInnerHTML={{ __html: innerHTML }}/>
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 import React, {useReducer, useRef} from 'react';
-import './NavBar.css';
+import styles from './NavBar.module.css';
 import NavBarStory from './NavBarStory.jsx';
 import NavBarStoryInfo from './NavBarStoryInfo.jsx';
 
@@ -34,8 +34,8 @@ export default function NavBar({ liveStories, showStory }) {
 
 	return (
 		<>
-			<div className="nav-bar">
-				<div className="content" ref={contentRef} onScroll={onScroll}>
+			<div className={styles.navBar}>
+				<div className={styles.content} ref={contentRef} onScroll={onScroll}>
 					{liveStories.map((story) => {
 						return (<NavBarStory
 							key={story._id}
@@ -47,7 +47,7 @@ export default function NavBar({ liveStories, showStory }) {
 					})}
 				</div>
 			</div>
-			<div className="nav-bar-overlay">
+			<div className={styles.navBarOverlay}>
 				{state.story && (
 					<NavBarStoryInfo story={state.story} position={state.storyPosition - state.scrollTop + 32}/>)}
 			</div>

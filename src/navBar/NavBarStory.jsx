@@ -1,6 +1,9 @@
+import classnames from 'classnames/bind';
 import React from 'react';
 import formatImageUrl from '../utils/formatImageUrl.js';
-import './NavBarStory.css';
+import styles from './NavBarStory.module.css';
+
+const cx = classnames.bind(styles);
 
 function getShortName(title) {
 	const match = title.match(/\b[A-z:']/g);
@@ -29,15 +32,15 @@ export default function NavBarStory({ data, showStory, onMouseEnter, onMouseLeav
 		showStory(data._id);
 	};
 	const shortName = getShortName(data.t);
-	let shortNameClass = 'short-name-large';
+	let shortNameClass = 'large';
 	if (shortName.length > 3) {
-		shortNameClass = 'short-name-medium';
+		shortNameClass = 'medium';
 	}
 	if (shortName.length > 5) {
-		shortNameClass = 'short-name-small';
+		shortNameClass = 'small';
 	}
 	return (
-		<div className="nav-bar-story"
+		<div className={styles.story}
 			 onClick={onClick}
 			 onMouseEnter={(e) => {
 				 onMouseEnter(data, e.currentTarget.offsetTop);
@@ -46,8 +49,8 @@ export default function NavBarStory({ data, showStory, onMouseEnter, onMouseLeav
 				 onMouseLeave(data);
 			 }}
 		>
-			<div className={`short-name ${shortNameClass}`}>{shortName}</div>
-			{coverUrl && <img src={coverUrl} alt="" className="icon"/>}
+			<div className={cx('shortName', shortNameClass)}>{shortName}</div>
+			{coverUrl && <img src={coverUrl} alt="" className={styles.icon}/>}
 		</div>
 	);
 }

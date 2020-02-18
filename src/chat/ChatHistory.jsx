@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import './ChatHistory.css';
+import styles from './ChatHistory.module.css';
 import ChatNode from './ChatNode.jsx';
 
 export default function ChatHistory({ client }) {
@@ -57,7 +57,7 @@ export default function ChatHistory({ client }) {
 	}, [client]);
 
 	return (
-		<div className="chat-history" ref={historyRef} onScroll={onScroll}>
+		<div className={styles.history} ref={historyRef} onScroll={onScroll}>
 			{nodes?.map((node) => {
 				return <ChatNode
 					key={node.id}

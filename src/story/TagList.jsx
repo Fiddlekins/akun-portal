@@ -1,14 +1,17 @@
+import classnames from 'classnames/bind';
 import React from 'react';
-import './TagList.css';
+import styles from './TagList.module.css';
+
+const cx = classnames.bind(styles);
 
 export default function TagList({ tags, spoilerTags }) {
 	return (
-		<div className="tag-list">
-			<span className="label">TAGS:</span>
+		<div className={styles.tagList}>
+			<span className={styles.label}>TAGS:</span>
 			{tags && tags.map((tag) => {
 				return (
 					<span
-						className={`tag ${spoilerTags.includes(tag) ? 'spoiler' : ''}`}
+						className={cx('tag', { spoiler: spoilerTags.includes(tag) })}
 						key={tag}
 					>
 						{tag}

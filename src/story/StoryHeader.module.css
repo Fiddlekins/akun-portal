@@ -1,48 +1,48 @@
-.story-header {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.story-header .title {
+.title {
     font-size: 4em;
     text-align: center;
 }
 
-.story-header .cover {
+.cover {
     max-width: 100%;
 }
 
-.story-header .description {
+.description {
     font-size: 2em;
     padding: 1em;
     user-select: text;
 }
 
-.story-header .authors {
+.authors {
     padding: 1em;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.story-header .author {
+.author {
     margin-right: 2em;
 }
 
-.story-header .author:hover .username {
+.author:hover .username {
     text-decoration: underline;
 }
 
-.story-header .authors a {
+.authors a {
     display: flex;
     align-items: center;
     color: rgb(212, 213, 217);
     text-decoration: none;
 }
 
-.story-header .avatar {
+.avatar {
     width: 32px;
     height: 32px;
     border-radius: 16px;
@@ -50,7 +50,7 @@
     display: inline;
 }
 
-.story-header .username {
+.username {
     font-weight: bold;
     display: inline;
     font-size: 1em;

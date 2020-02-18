@@ -1,35 +1,35 @@
-.reader-post-node {
+.node {
     word-break: break-word;
     user-select: text;
     padding: 1em;
 }
 
-.reader-post-node .header {
+.header {
     display: flex;
 }
 
-.reader-post-node .title {
+.title {
     font-size: 16px;
     font-weight: 400;
 }
 
-.choice-node .closed-state {
+.closedState {
     color: rgb(153, 153, 153);
     font-size: 14px;
 }
 
-.reader-post-node .count {
+.count {
     color: rgb(153, 153, 153);
     font-size: 14px;
 }
 
-.reader-post-node .date {
+.date {
     color: rgb(153, 153, 153);
     font-size: 14px;
     margin-left: auto;
 }
 
-.reader-post-node .entry {
+.entry {
     padding: 0.5em;
     margin-bottom: 2px;
     background-color: #383a4c6e;

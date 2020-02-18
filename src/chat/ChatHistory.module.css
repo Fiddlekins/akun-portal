@@ -1,14 +1,14 @@
-.chat-history {
+.history {
     overflow-y: auto;
     flex-grow: 1;
 }
 
-.chat-history::-webkit-scrollbar-track-piece {
+.history::-webkit-scrollbar-track-piece {
     border: 3px solid rgb(33, 34, 46);
     background-color: rgb(39, 41, 63);
 }
 
-.chat-history::-webkit-scrollbar-thumb {
+.history::-webkit-scrollbar-thumb {
     border: 3px solid rgb(33, 34, 46);
     background-color: rgb(18, 19, 29);
 }
