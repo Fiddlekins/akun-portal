@@ -17,8 +17,8 @@
 .info a {
     display: flex;
     align-items: center;
-    color: grey;
     text-decoration: none;
+    color: grey;
 }
 
 .avatar {
@@ -33,6 +33,18 @@
     font-weight: bold;
     display: inline;
     font-size: 10px;
+}
+
+.trueAnon {
+    color: grey;
+}
+
+.falseAnon {
+    color: #704d53;
+}
+
+.qm {
+    color: white;
 }
 
 .date {
