@@ -7,13 +7,13 @@
     background-color: rgb(33, 34, 46);
 }
 
- .content {
+.content {
     height: 100%;
     width: 100px;
     overflow-y: auto;
 }
 
- .content::-webkit-scrollbar {
+.content::-webkit-scrollbar {
     display: none;
 }
 

@@ -1,13 +1,13 @@
-import React from 'react';
-import styles from './NavBarStoryInfo.module.css';
+import React from 'react'
+import styles from './NavBarStoryInfo.module.css'
 
-export default function NavBarStoryInfo({ story, position }) {
-	return (
-		<div className={styles.storyInfo} style={{ top: `${position}px` }}>
-			<div className={styles.pointer}/>
-			<div className={styles.content}>
-				<div dangerouslySetInnerHTML={{ __html: story.t }}/>
-			</div>
-		</div>
-	);
+export function NavBarStoryInfo ({ story, position }) {
+  return (
+    <div className={styles.storyInfo} style={{ top: `${position}px` }}>
+      <div className={styles.pointer}/>
+      <div className={styles.content}>
+        <div dangerouslySetInnerHTML={{ __html: story.t }}/>
+      </div>
+    </div>
+  )
 }

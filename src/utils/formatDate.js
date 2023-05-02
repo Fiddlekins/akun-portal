@@ -1,3 +1,3 @@
-export default function formatDate(date) {
-	return date.toLocaleString();
+export default function formatDate (date) {
+  return date.toLocaleString()
 }
